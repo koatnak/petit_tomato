@@ -27,11 +27,7 @@ def run_timer(seconds, timer_number, total_timers):
 	
 	for remaining in range(seconds, 0, -1):
 		print(f"\r残り時間: {remaining:3d} 秒", end="", flush=True)
-		if remaining % 10 == 0:
-			winsound.Beep(440, 500)
-			time.sleep(0.5)
-		else:
-			time.sleep(1)
+		time.sleep(1)
 	
 	print("\r✓ タイマー完了！    ")
 	# タイマー終了時に音を鳴らす
